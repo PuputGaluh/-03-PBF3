@@ -21,3 +21,5 @@ export default async function handler(req, res) { // Mendefinisikan fungsi handl
         res.status(500).json({ message: "Terjadi kesalahan server. Coba lagi nanti." }); // Kirim error dengan status 500 (Internal Server Error)
     }
 }
+
+// .
