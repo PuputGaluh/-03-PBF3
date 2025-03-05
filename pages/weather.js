@@ -31,7 +31,7 @@ export default function Weather() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6"> {/* Kontainer utama dengan styling */}
-      <h1 className="text-3xl font-bold mb-4">Data Cuaca</h1> {/* Judul utama aplikasi */}
+      <h1 className="text-3xl text-black font-bold mb-4">Data Cuaca</h1> {/* Judul utama aplikasi */}
       
       <div className="flex gap-2 mb-4"> {/* Input untuk memasukkan nama kota dan tombol untuk mencari cuaca */}
         <input
@@ -39,7 +39,7 @@ export default function Weather() {
           value={city} // Nilai input diambil dari state city
           onChange={(e) => setCity(e.target.value)} // Mengupdate state saat input berubah
           placeholder="Masukkan nama kota..."
-          className="p-2 border rounded-lg w-64 shadow-sm"
+          className="p-2 border rounded-lg w-64 shadow-sm text-black"
         />
         <button onClick={fetchWeather} className="p-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600"> {/* Tombol untuk mencari cuaca */}
           Tampilkan Cuaca
@@ -49,9 +49,9 @@ export default function Weather() {
       {error && <p className="text-red-500 text-sm mb-4">{error}</p>} {/* Menampilkan pesan error jika terjadi kesalahan */}
 
       {weather && weather.main && weather.wind && ( // Jika data cuaca tersedia, tampilkan informasi */}
-        <div className="bg-white p-6 rounded-lg shadow-lg text-center w-80"> {/* Kontainer informasi cuaca */}
-          <h2 className="text-2xl font-bold mb-2">{weather.name}</h2> {/* Nama kota */}
-          <p className="text-lg">Temperatur: {weather.main.temp}°C</p> {/* Temperatur saat ini */}
+        <div className="bg-white p-6 rounded-lg shadow-lg text-center w-80 text-black"> {/* Kontainer informasi cuaca */}
+          <h2 className="text-2xl font-bold mb-2 text-black">{weather.name}</h2> {/* Nama kota */}
+          <p className="text-lg text-black">Temperatur: {weather.main.temp}°C</p> {/* Temperatur saat ini */}
           <p>Terasa seperti: {weather.main.feels_like}°C</p> {/* Temperatur yang dirasakan */}
           <p>Curah hujan: {weather.rain?.['1h'] || 0} mm</p> {/* Curah hujan dalam mm, jika tersedia */}
           <p>Kecepatan angin: {weather.wind.speed} m/s</p> {/* Kecepatan angin dalam m/s */}

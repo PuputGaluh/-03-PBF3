@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-function HomePage() {
+const HomePage = () => {
   return (
     <div>
       <h1>Selamat Datang di Website Saya!</h1>
@@ -15,4 +15,3 @@ function HomePage() {
 
 export default HomePage;
 
-// .
